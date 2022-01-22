@@ -462,12 +462,12 @@ hr {
     align-items: center;
 }
 
-.contact-me-message {
+.contact-me-text {
     display: flex;
     justify-content: space-between;
 }
 
-.contact-me-message p {
+.contact-me-text p {
     display: inline-block;
 }
 
@@ -653,15 +653,15 @@ hr {
         display: block;
     }
 
-    .contact-me-message {
+    .contact-me-text {
         display: block;
     }
 
-    .contact-me-message p {
+    .contact-me-text p {
         display: block;
     }
 
-    .contact-me-message mark {
+    .contact-me-text p:last-of-type {
         margin-bottom: 1.25rem;
     }
 }
