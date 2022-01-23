@@ -241,11 +241,6 @@ hr {
     }
 }
 
-.about-me-image {
-    display: flex;
-    align-items: center;
-}
-
 /* Projects */
 
 #projects-section {
@@ -431,7 +426,7 @@ hr {
     z-index: 1;
 }
 
-.frontend-skill-box {
+.frontend-skills-box {
     margin: -4px;
 }
 
@@ -499,6 +494,19 @@ hr {
     resize: vertical;
 }
 
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+    border-color: var(--fg-color);
+    transition: 0.3s;
+
+    outline: none;
+}
+
+::placeholder {
+    color: var(--fg-color);
+    opacity: 0.5;
+}
+
 .contact-form button {
     padding: 1.25rem;
     border: none;
@@ -521,28 +529,15 @@ hr {
     transition: 0.3s linear;
 }
 
-.contact-form button:hover > .button-gradient {
-    transition: 0.3s linear;
-    opacity: 1;
-}
-
-.contact-form input:focus-visible,
-.contact-form textarea:focus-visible {
-    border-color: var(--fg-color);
-    transition: 0.3s;
-
-    outline: none;
-}
-
-::placeholder {
-    color: var(--fg-color);
-    opacity: 0.5;
-}
-
 .button-text {
     position: relative;
     z-index: 1;
     transition: 0.3s linear;
+}
+
+.contact-form button:hover > .button-gradient {
+    transition: 0.3s linear;
+    opacity: 1;
 }
 
 .contact-form button:hover > .button-text {
@@ -604,14 +599,6 @@ hr {
 
     .skills-box {
         padding: 1.25rem 2rem;
-    }
-
-    .easter-basket {
-        height: 2.25rem;
-    }
-
-    .easter-egg {
-        font-size: 1.5rem;
     }
 
     .frontend {
