@@ -597,8 +597,12 @@ hr {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .skills-box {
-        padding: 1.25rem 2rem;
+    .easter-basket {
+        height: 2.25rem;
+    }
+
+    .easter-egg {
+        font-size: 1.5rem;
     }
 
     .frontend {
