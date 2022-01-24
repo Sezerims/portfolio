@@ -341,7 +341,7 @@ hr {
             var(--bg-color-one) 9px,
             var(--bg-color-one) 18px
     );
-    background-size: 200%;
+    background-size: 600%;
     position: absolute;
     left: 4px;
     right: 4px;
@@ -358,15 +358,15 @@ hr {
 
 .skills-container:hover > .white-space-filler {
     transition: 2s linear;
-    animation: wave 2s linear infinite;
+    animation: sliding-background 12s linear infinite;
 }
 
-@keyframes wave {
+@keyframes sliding-background {
     0% {
-        background-position: top right;
+        background-position-x: right;
     }
     100% {
-        background-position: top left;
+        background-position-x: left;
     }
 }
 
@@ -546,6 +546,16 @@ hr {
 }
 
 /* Media Queries */
+
+@media (max-width: 960px) {
+    .white-space-filler {
+        background-size: 1000%;
+    }
+
+    .skills-container:hover > .white-space-filler {
+        animation: sliding-background 12s linear infinite;
+    }
+}
 
 @media (max-width: 870px) {
     .skills-grid {
