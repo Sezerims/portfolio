@@ -1,53 +1,55 @@
 :root {
     --bg-color-one: #eee;
-    --bg-color-one-alpha: rgba(238, 238, 238, 0);
     --bg-color-two: #ddd;
-
+    
+    --fg-color: #000;
+    
+    --alpha: rgba(0, 0, 0, 0);
+    
     --image-alpha: rgba(17, 17, 17, 0.5);
 
-    --fg-color: #000;
-
+    /*
     --accent-color-light: #00FFC0;
     --accent-color-medium: #00BFFF;
     --accent-color-dark: #0040FF;
+    */
 
-    --anim-color-one: #0040FF;
-    --anim-color-two: #00BFFF;
-    --anim-color-three: #00FFC0;
+    --cs-color-one: #0040FF;
+    --cs-color-two: #00BFFF;
+    --cs-color-three: #00FFC0;
 
     --accent-gradient: linear-gradient(90deg, #00FFC0, #00BFFF, #0040FF);
 
     --theme-toggler-color: gold;
     --theme-toggler-shadow: 0 0 10px #eee;
     --theme-toggler-mini-shadow: 0 0 10px gold;
-
-    --highlight-color: #0040FF;
 }
 
 .dark-theme {
     --bg-color-one: #111;
-    --bg-color-one-alpha: rgba(17, 17, 17, 0);
     --bg-color-two: #292C35;
-
-    --image-alpha: rgba(17, 17, 17, 0.5);
 
     --fg-color: #fff;
 
+    --alpha: rgba(0, 0, 0, 0);
+    
+    --image-alpha: rgba(17, 17, 17, 0.5);
+
+    /*
     --accent-color-light: #E91484;
     --accent-color-medium: #9A2888;
     --accent-color-dark: #37238B;
+    */
 
-    --anim-color-one: #E91484;
-    --anim-color-two: #9A2888;
-    --anim-color-three: #37238B;
+    --cs-color-one: #E91484;
+    --cs-color-two: #9A2888;
+    --cs-color-three: #37238B;
 
     --accent-gradient: linear-gradient(90deg, #37238B, #9A2888, #E91484);
 
     --theme-toggler-color: #ddd;
     --theme-toggler-shadow: 0 0 10px #eee;
     --theme-toggler-mini-shadow: 0 0 10px #eee;
-
-    --highlight-color: #E91484;
 }
 
 html {
@@ -231,13 +233,13 @@ hr {
         color: var(--fg-color);
     }
     16.666%, 83.333% {
-        color: var(--anim-color-one);
+        color: var(--cs-color-one);
     }
     33.333%, 66.666% {
-        color: var(--anim-color-two);
+        color: var(--cs-color-two);
     }
     50% {
-        color: var(--anim-color-three);
+        color: var(--cs-color-three);
     }
 }
 
@@ -335,11 +337,11 @@ hr {
 
 .white-space-filler {
     background: repeating-linear-gradient(
-            -45deg,
-            var(--bg-color-one-alpha),
-            var(--bg-color-one-alpha) 9px,
-            var(--bg-color-one) 9px,
-            var(--bg-color-one) 18px
+        -45deg,
+        var(--alpha),
+        var(--alpha) 9px,
+        var(--bg-color-one) 9px,
+        var(--bg-color-one) 18px
     );
     background-size: 600%;
     position: absolute;
