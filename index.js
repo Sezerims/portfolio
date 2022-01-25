@@ -1,3 +1,3 @@
-$(".toggle-theme").on("click", function() {
-    $(document.body).toggleClass("dark-theme");
+document.querySelector(".toggle-theme").addEventListener("click", function() {
+    document.body.classList.toggle("dark-theme");
 });
