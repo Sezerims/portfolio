@@ -8,12 +8,6 @@
     
     --image-alpha: rgba(17, 17, 17, 0.5);
 
-    /*
-    --accent-color-light: #00FFC0;
-    --accent-color-medium: #00BFFF;
-    --accent-color-dark: #0040FF;
-    */
-
     --cs-color-one: #0040FF;
     --cs-color-two: #00BFFF;
     --cs-color-three: #00FFC0;
@@ -23,6 +17,8 @@
     --theme-toggler-color: gold;
     --theme-toggler-shadow: 0 0 10px #eee;
     --theme-toggler-mini-shadow: 0 0 10px gold;
+
+    --toggle-button-position-left: 4px;
 }
 
 .dark-theme {
@@ -35,12 +31,6 @@
     
     --image-alpha: rgba(17, 17, 17, 0.5);
 
-    /*
-    --accent-color-light: #E91484;
-    --accent-color-medium: #9A2888;
-    --accent-color-dark: #37238B;
-    */
-
     --cs-color-one: #E91484;
     --cs-color-two: #9A2888;
     --cs-color-three: #37238B;
@@ -50,6 +40,8 @@
     --theme-toggler-color: #ddd;
     --theme-toggler-shadow: 0 0 10px #eee;
     --theme-toggler-mini-shadow: 0 0 10px #eee;
+
+    --toggle-button-position-left: 42px;
 }
 
 html {
@@ -151,10 +143,6 @@ hr {
     display: none;
 }
 
-.toggle-theme:checked + .toggle-box .toggle-button {
-    left: 42px;
-}
-
 .toggle-box {
     background: var(--accent-gradient);
     border-radius: 50px;
@@ -170,7 +158,6 @@ hr {
     align-items: center;
 
     position: relative;
-    transition: all 0.3s linear;
 }
 
 .toggle-button {
@@ -182,12 +169,12 @@ hr {
     width: 28px;
 
     position: absolute;
-    left: 4px;
+    left: var(--toggle-button-position-left);
     top: 0;
     bottom: 0;
     margin: auto 0;
 
-    transition: background-color 0.3s ease-in-out, left 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* About Me */
